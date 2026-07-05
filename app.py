@@ -60,7 +60,7 @@ if not leaderboard_df.empty:
             color = 'red'
         return f'color: {color}; font-weight: bold'
 
-    styled_df = leaderboard_df.style.applymap(color_sentiment, subset=['Sentiment Category'])
+    styled_df = leaderboard_df.style.map(color_sentiment, subset=['Sentiment Category'])
     
     st.dataframe(
         styled_df,
